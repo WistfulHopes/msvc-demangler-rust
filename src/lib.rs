@@ -773,6 +773,9 @@ impl<'a> ParserState<'a> {
                         }
                     }
                 }
+                b'@' => {
+                    break;
+                }
                 _ => {
                     return Err(self.fail_args(format_args!(
                         "unknown escaped encoded string character {}",
